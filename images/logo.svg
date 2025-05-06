@@ -1,0 +1,8 @@
+<svg width="220" height="50" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 标志图形部分 -->
+  <path d="M30 10H10C6.68629 10 4 12.6863 4 16V34C4 37.3137 6.68629 40 10 40H30C33.3137 40 36 37.3137 36 34V16C36 12.6863 33.3137 10 30 10Z" fill="#003D73"/>
+  <path d="M20 15L25 25L20 35L15 25L20 15Z" fill="white"/>
+  
+  <!-- 城根商业文字 -->
+  <text x="46" y="30" font-family="'Noto Sans SC', sans-serif" font-size="18" font-weight="bold" fill="#003D73">城根商业</text>
+</svg> 

@@ -1,0 +1,46 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#64b5f6" />
+    </linearGradient>
+    <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="pulse" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" />
+    </filter>
+  </defs>
+  
+  <!-- 外圆环 -->
+  <circle cx="40" cy="40" r="30" stroke="url(#grad2)" stroke-width="2" fill="none" filter="url(#glow2)" />
+  <circle cx="40" cy="40" r="28" stroke="url(#grad2)" stroke-width="1" stroke-dasharray="2 4" fill="none" opacity="0.6">
+    <animateTransform attributeName="transform" type="rotate" from="0 40 40" to="360 40 40" dur="20s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- 内部人形 -->
+  <circle cx="40" cy="28" r="8" fill="url(#grad2)" filter="url(#glow2)" />
+  <path d="M25 60C25 49 35 44 40 44C45 44 55 49 55 60" stroke="url(#grad2)" stroke-width="3" fill="none" filter="url(#glow2)" />
+  
+  <!-- 互联网连接线 -->
+  <path d="M40 15L40 5" stroke="url(#grad2)" stroke-width="1" stroke-dasharray="2 2" />
+  <path d="M62 40L72 40" stroke="url(#grad2)" stroke-width="1" stroke-dasharray="2 2" />
+  <path d="M40 65L40 75" stroke="url(#grad2)" stroke-width="1" stroke-dasharray="2 2" />
+  <path d="M18 40L8 40" stroke="url(#grad2)" stroke-width="1" stroke-dasharray="2 2" />
+  
+  <!-- 数据节点 -->
+  <circle cx="40" cy="5" r="3" fill="url(#grad2)" filter="url(#pulse)">
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="72" cy="40" r="3" fill="url(#grad2)" filter="url(#pulse)">
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" begin="0.5s" />
+  </circle>
+  <circle cx="40" cy="75" r="3" fill="url(#grad2)" filter="url(#pulse)">
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" begin="1s" />
+  </circle>
+  <circle cx="8" cy="40" r="3" fill="url(#grad2)" filter="url(#pulse)">
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" begin="1.5s" />
+  </circle>
+</svg> 

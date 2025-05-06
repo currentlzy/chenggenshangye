@@ -1,0 +1,51 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#64b5f6" />
+    </linearGradient>
+    <filter id="glow3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 15 -6" />
+    </filter>
+  </defs>
+  
+  <!-- 币/价值基础图形 -->
+  <circle cx="40" cy="40" r="25" fill="none" stroke="url(#grad3)" stroke-width="2" filter="url(#glow3)" />
+  
+  <!-- 上升趋势 -->
+  <path d="M15 55 L30 45 L45 50 L65 30" stroke="url(#grad3)" stroke-width="3" fill="none" filter="url(#glow3)" stroke-linecap="round" />
+  
+  <!-- 数据点 -->
+  <circle cx="15" cy="55" r="3" fill="url(#grad3)" filter="url(#neon)" />
+  <circle cx="30" cy="45" r="3" fill="url(#grad3)" filter="url(#neon)" />
+  <circle cx="45" cy="50" r="3" fill="url(#grad3)" filter="url(#neon)" />
+  <circle cx="65" cy="30" r="3" fill="url(#grad3)" filter="url(#neon)" />
+  
+  <!-- 抽象金融符号 -->
+  <path d="M40 15 L40 40" stroke="url(#grad3)" stroke-width="2" stroke-dasharray="2 2" />
+  <path d="M25 40 L55 40" stroke="url(#grad3)" stroke-width="2" stroke-dasharray="2 2" />
+  <circle cx="40" cy="40" r="5" fill="url(#grad3)" filter="url(#glow3)">
+    <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- 轨道线 -->
+  <ellipse cx="40" cy="40" rx="35" ry="20" fill="none" stroke="url(#grad3)" stroke-width="1" opacity="0.2" />
+  <ellipse cx="40" cy="40" rx="35" ry="20" fill="none" stroke="url(#grad3)" stroke-width="1" opacity="0.2" transform="rotate(60 40 40)" />
+  <ellipse cx="40" cy="40" rx="35" ry="20" fill="none" stroke="url(#grad3)" stroke-width="1" opacity="0.2" transform="rotate(120 40 40)" />
+  
+  <!-- 价值流动点 -->
+  <circle cx="40" cy="5" r="2" fill="url(#grad3)">
+    <animateMotion path="M0 0 A35 20 0 1 1 0 -0.1 z" dur="8s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="40" cy="5" r="2" fill="url(#grad3)">
+    <animateMotion path="M0 0 A35 20 0 1 1 0 -0.1 z" dur="8s" repeatCount="indefinite" begin="2.6s" />
+  </circle>
+  <circle cx="40" cy="5" r="2" fill="url(#grad3)">
+    <animateMotion path="M0 0 A35 20 0 1 1 0 -0.1 z" dur="8s" repeatCount="indefinite" begin="5.3s" />
+  </circle>
+</svg> 

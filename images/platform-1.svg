@@ -1,0 +1,32 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#64b5f6" />
+    </linearGradient>
+    <filter id="glow1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- 大学建筑图标 -->
+  <path d="M40 10L10 25V28H70V25L40 10Z" fill="url(#grad1)" filter="url(#glow1)" />
+  <path d="M18 30V55H62V30H18Z" fill="none" stroke="url(#grad1)" stroke-width="2" />
+  
+  <!-- 柱子 -->
+  <rect x="23" y="32" width="4" height="23" fill="url(#grad1)" filter="url(#glow1)" />
+  <rect x="33" y="32" width="4" height="23" fill="url(#grad1)" filter="url(#glow1)" />
+  <rect x="43" y="32" width="4" height="23" fill="url(#grad1)" filter="url(#glow1)" />
+  <rect x="53" y="32" width="4" height="23" fill="url(#grad1)" filter="url(#glow1)" />
+  
+  <!-- 底座 -->
+  <rect x="15" y="55" width="50" height="5" fill="url(#grad1)" filter="url(#glow1)" />
+  
+  <!-- 书本 -->
+  <path d="M35 18L31 20H49L45 18H35Z" fill="#64b5f6" filter="url(#glow1)" />
+  
+  <!-- 电子链接动画 -->
+  <circle cx="40" cy="40" r="25" stroke="url(#grad1)" stroke-width="1" fill="none" opacity="0.2" />
+  <circle cx="40" cy="40" r="30" stroke="url(#grad1)" stroke-width="1" fill="none" opacity="0.1" />
+</svg> 
