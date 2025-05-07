@@ -32,7 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // 优化导航栏滚动效果
         setupNavbarScroll();
         
-        console.log('所有初始化函数已执行');
+        // 添加返回顶部功能
+        setupBackToTop();
+        
+        console.log('所有初始化函数已执行，包括返回顶部功能');
     } catch (error) {
         console.error('初始化过程中出错:', error);
     }
@@ -616,4 +619,34 @@ function setupCardAnimations() {
             }, 4000);
         }
     }
+}
+
+// 添加返回顶部功能
+function setupBackToTop() {
+    // 创建返回顶部按钮
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.className = 'back-to-top';
+    backToTopBtn.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 3.75L3.75 10H7.5V16.25H12.5V10H16.25L10 3.75Z" fill="currentColor" transform="rotate(180 10 10)"/>
+        </svg>
+    `;
+    document.body.appendChild(backToTopBtn);
+
+    // 监听滚动事件，显示/隐藏按钮
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    // 点击事件
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 } 

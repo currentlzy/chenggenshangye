@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>B端平台合作流转 - 案例详情</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#081b29">
+</head>
+<body class="font-sans text-gray-900 bg-white scroll-smooth">
+    <div class="page-transition-mask"></div>
+    
+    <!-- 顶部导航栏 -->
+    <nav class="fixed top-0 w-full bg-opacity-95 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- LOGO -->
+            <a href="../index.html" class="flex items-center">
+                <img src="../images/logo.png" alt="城根商业" class="h-12">
+                <span class="ml-3 text-xl font-bold text-white">城根商业</span>
+            </a>
+            
+            <!-- 导航链接 -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html#academy-card" class="nav-link text-white">任务商学院</a>
+                <a href="../index.html#goodmaster-card" class="nav-link text-white">好主人</a>
+                <a href="../index.html#fund-card" class="nav-link text-white">任务基金</a>
+                <a href="../about.html" class="nav-link text-white">关于我们</a>
+                <a href="../join.html" class="nav-link text-white">加入我们</a>
+            </div>
+            
+            <!-- 右侧按钮 -->
+            <div class="flex items-center space-x-4">
+                <a href="../register.html" class="btn btn-outline">注册</a>
+                <a href="../login.html" class="btn btn-primary">登录</a>
+                <div class="relative language-switcher">
+                    <button class="flex items-center text-white">
+                        <span>中文</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button class="md:hidden menu-button text-white" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主横幅区域 -->
+    <section class="hero-section tech-gradient-section scroll-section" style="min-height: 70vh;">
+        <div class="particles-container" id="hero-particles"></div>
+        <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="card-icon mx-auto mb-6" style="width: 120px; height: 120px;">
+                    <img src="../images/use-case-3.svg" alt="B端平台合作流转" class="h-16 w-16">
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 hero-title">
+                    B端平台合作流转
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 hero-subtitle">企业间任务资产的流转与合作，打破传统商业合作边界，创造全新协同价值</p>
+            </div>
+        </div>
+
+        <!-- 动态背景元素 -->
+        <div class="hero-bg-glow"></div>
+        <div class="parallax-bg parallax-element" data-speed="0.5"></div>
+    </section>
+
+    <!-- 场景概述 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="overview-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">场景概述</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll">
+                    <p class="text-gray-200 leading-relaxed">
+                        B端平台合作流转是指企业将自身业务能力、服务产品和资源通过任务形式在平台上标准化，实现企业间的精准对接和价值流转的创新模式。这种模式突破了传统企业合作的边界和限制，促进了资源的高效配置和能力的互补共享，创造了全新的协同价值和商业机会，同时大幅降低了企业间合作的交易成本和沟通成本。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用流程 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="process-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">应用流程</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 gap-8">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-100">
+                    <h3 class="text-2xl font-bold mb-4 text-white">能力任务化</h3>
+                    <p class="text-gray-200 leading-relaxed">
+                        企业将自身核心业务能力、专业服务和资源按照平台标准进行任务化拆解和描述，明确定义任务内容、完成标准和价值衡量指标，形成可交易的标准化任务资产。根据业务特性和专业程度，设计不同层级和类型的任务，实现能力的模块化和精细化管理。
+                    </p>
+                </div>
+                
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-200">
+                    <h3 class="text-2xl font-bold mb-4 text-white">精准对接与合作</h3>
+                    <p class="text-gray-200 leading-relaxed">
+                        平台基于智能算法和数据分析，为企业间的任务需求和供给提供精准匹配服务。企业可以根据自身需求直接选择合适的任务资产进行合作，或者发布需求吸引适合的合作伙伴。平台提供全流程的协作工具、合同管理和进度追踪，确保合作顺利进行。
+                    </p>
+                </div>
+                
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-300">
+                    <h3 class="text-2xl font-bold mb-4 text-white">价值流转与生态协同</h3>
+                    <p class="text-gray-200 leading-relaxed">
+                        随着企业间任务合作的深入，形成持续性的价值流转网络和生态协同关系。企业可以通过任务完成积累声誉和信用，提升自身资产的价值和市场影响力。平台促进企业间多维度的资源整合和能力互补，创造超越单一企业的综合竞争优势和创新空间。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例展示 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="case-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">案例展示</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll">
+                    <h3 class="text-2xl font-bold mb-4 text-white">营销服务能力共享平台</h3>
+                    <p class="text-gray-200 mb-8 leading-relaxed">
+                        某领先的数字营销集团通过城根商业平台将其专业营销服务能力进行模块化拆分和任务化处理，形成了包括内容创作、社媒运营、数据分析等在内的标准化任务资产库。多家企业通过平台对接这些营销服务资产，实现精准的营销需求满足和资源共享。
+                    </p>
+                    
+                    <h4 class="text-xl font-bold mb-2 text-white">实施效果</h4>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>营销服务交付效率提升63%，客户满意度提高45%</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>平台合作伙伴数量在6个月内增长了320%</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>业务运营成本降低37%，服务模式创新收入占比达52%</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8 p-6 bg-opacity-10 bg-blue-500 rounded-xl">
+                        <p class="text-gray-300 italic">
+                            "任务资产化模式彻底革新了我们的业务合作方式。过去需要繁琐洽谈和复杂合同的合作，现在可以在平台上即时完成。我们不仅获得了更多客户，还与其他企业形成了紧密的生态协同关系。"
+                            <br>— 数字营销集团业务总监
+                        </p>
+                    </div>
+                    
+                    <p class="text-sm text-gray-400 mt-4 italic">
+                        * 备注：本案例为虚构，仅供参考
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价值分析 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="value-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">价值分析</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-100">
+                    <h3 class="text-2xl font-bold mb-4 text-white">对能力供给方的价值</h3>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>开拓新的市场渠道和客户群体</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>降低获客和服务交付成本</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>实现能力资产的持续价值增长</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-200">
+                    <h3 class="text-2xl font-bold mb-4 text-white">对需求方的价值</h3>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>获取高质量、标准化的专业能力支持</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>提高资源配置效率，降低合作沟通成本</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>实现灵活的业务扩展和创新模式探索</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作与咨询 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="contact-particles"></div>
+        <div class="container mx-auto px-4">
+            <div class="cta-container animate-on-scroll">
+                <h2 class="text-3xl font-bold mb-6">合作咨询</h2>
+                <p class="text-gray-700 mb-8">
+                    如果您是企业希望了解更多关于B端平台合作流转的信息，或者有意向参与平台生态建设，请联系我们的企业服务团队，获取定制化解决方案。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="text-center">
+                        <div class="cta-button">
+                            <img src="../images/qrcode.svg" alt="微信二维码" class="h-32 mx-auto">
+                        </div>
+                        <p class="mt-3 text-sm text-white opacity-80">扫码咨询详情</p>
+                    </div>
+                    <div class="text-center flex flex-col justify-center space-y-4">
+                        <a href="#" class="btn-cta inline-block">
+                            <span>预约能力评估</span>
+                        </a>
+                        <a href="#" class="notion-button">
+                            <span class="mr-2">下载企业合作手册</span>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚区域 -->
+    <footer class="py-12 tech-gradient-section">
+        <div class="particles-container" id="footer-particles"></div>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="animate-on-scroll">
+                    <img src="../images/logo.svg" alt="城根商业" class="h-10 mb-4">
+                    <p class="text-gray-400">开启任务经济新纪元</p>
+                </div>
+                <div class="animate-on-scroll delay-100">
+                    <h4 class="text-lg font-semibold mb-4 text-white">平台</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html#academy-card" class="footer-link text-gray-400 hover:text-white">任务商学院</a></li>
+                        <li><a href="../index.html#goodmaster-card" class="footer-link text-gray-400 hover:text-white">好主人平台</a></li>
+                        <li><a href="../index.html#fund-card" class="footer-link text-gray-400 hover:text-white">任务基金</a></li>
+                    </ul>
+                </div>
+                <div class="animate-on-scroll delay-200">
+                    <h4 class="text-lg font-semibold mb-4 text-white">资源</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../docs.html" class="footer-link text-gray-400 hover:text-white">文档</a></li>
+                        <li><a href="../faq.html" class="footer-link text-gray-400 hover:text-white">常见问题</a></li>
+                        <li><a href="../blog.html" class="footer-link text-gray-400 hover:text-white">博客</a></li>
+                    </ul>
+                </div>
+                <div class="animate-on-scroll delay-300">
+                    <h4 class="text-lg font-semibold mb-4 text-white">法律</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../terms.html" class="footer-link text-gray-400 hover:text-white">服务条款</a></li>
+                        <li><a href="../privacy.html" class="footer-link text-gray-400 hover:text-white">隐私政策</a></li>
+                        <li><a href="../data-policy.html" class="footer-link text-gray-400 hover:text-white">数据协议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 animate-on-scroll">
+                <p>&copy; 2023 城根商业. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // 移动端菜单切换
+        function toggleMobileMenu() {
+            if (!document.querySelector('.mobile-menu')) {
+                const mobileMenu = document.createElement('div');
+                mobileMenu.className = 'mobile-menu fixed inset-0 tech-gradient-section z-40 p-4 flex flex-col';
+                mobileMenu.innerHTML = `
+                    <div class="flex justify-end">
+                        <button class="close-mobile-menu text-white" onclick="document.querySelector('.mobile-menu').remove()">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-center items-center space-y-6 text-xl">
+                        <a href="../index.html#academy-card" class="text-white hover:text-blue-300 transition-colors">任务商学院</a>
+                        <a href="../index.html#goodmaster-card" class="text-white hover:text-blue-300 transition-colors">好主人</a>
+                        <a href="../index.html#fund-card" class="text-white hover:text-blue-300 transition-colors">任务基金</a>
+                        <a href="../about.html" class="text-white hover:text-blue-300 transition-colors">关于我们</a>
+                        <a href="../join.html" class="text-white hover:text-blue-300 transition-colors">加入我们</a>
+                        <div class="flex mt-8 space-x-4">
+                            <a href="../register.html" class="btn btn-outline">注册</a>
+                            <a href="../login.html" class="btn btn-primary">登录</a>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(mobileMenu);
+            } else {
+                document.querySelector('.mobile-menu').remove();
+            }
+        }
+    </script>
+</body>
+</html> 

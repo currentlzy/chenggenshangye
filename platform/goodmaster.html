@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好主人平台 - 为企业和个人提供一站式任务发布、接受、管理和资产化服务的综合性平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- 添加思源黑体字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#081b29">
+</head>
+<body class="font-sans text-gray-900 bg-white scroll-smooth">
+    <!-- 页面过渡遮罩 -->
+    <div class="page-transition-mask"></div>
+    
+    <!-- 顶部导航栏 -->
+    <nav class="fixed top-0 w-full bg-opacity-95 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- LOGO -->
+            <a href="../index.html" class="flex items-center">
+                <img src="../images/logo.png" alt="城根商业" class="h-12">
+                <span class="ml-3 text-xl font-bold text-white">城根商业</span>
+            </a>
+            
+            <!-- 导航链接 -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html#academy-card" class="nav-link text-white">任务商学院</a>
+                <a href="../index.html#goodmaster-card" class="nav-link text-white">好主人</a>
+                <a href="../index.html#fund-card" class="nav-link text-white">任务基金</a>
+                <a href="../about.html" class="nav-link text-white">关于我们</a>
+                <a href="../join.html" class="nav-link text-white">加入我们</a>
+            </div>
+            
+            <!-- 右侧按钮 -->
+            <div class="flex items-center space-x-4">
+                <a href="../register.html" class="btn btn-outline">注册</a>
+                <a href="../login.html" class="btn btn-primary">登录</a>
+                <div class="relative language-switcher">
+                    <button class="flex items-center text-white">
+                        <span>中文</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button class="md:hidden menu-button text-white" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主横幅区域 -->
+    <section class="hero-section tech-gradient-section scroll-section" style="min-height: 70vh;">
+        <div class="particles-container" id="hero-particles"></div>
+        <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="card-icon mx-auto mb-6" style="width: 120px; height: 120px;">
+                    <img src="../images/platform-2.svg" alt="好主人平台" class="h-16 w-16">
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 hero-title">
+                    好主人平台
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 hero-subtitle">为企业和个人提供一站式任务发布、接受、管理和资产化服务的综合性平台</p>
+            </div>
+        </div>
+
+        <!-- 动态背景元素 -->
+        <div class="hero-bg-glow"></div>
+        <div class="parallax-bg parallax-element" data-speed="0.5"></div>
+    </section>
+
+    <!-- 愿景与使命 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="vision-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">愿景与使命</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll">
+                    <h3 class="text-2xl font-bold mb-4 text-white">我们的愿景</h3>
+                    <p class="text-gray-200 mb-8 leading-relaxed">
+                        打造全球领先的任务经济平台，连接任务发布者与执行者，重新定义任务价值，推动任务经济生态系统良性发展。
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold mb-4 text-white">我们的使命</h3>
+                    <p class="text-gray-200 leading-relaxed">
+                        通过技术和数据驱动，为每一个任务赋能，让任务的价值被发现、被流通，为任务发布者和执行者创造更大价值，促进整体社会资源的优化配置。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心功能 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="features-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">核心功能</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 功能卡片 1 -->
+                <div class="platform-card animate-on-scroll delay-100">
+                    <div class="card-icon">
+                        <svg class="h-10 w-10 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">任务智能匹配</h3>
+                    <p class="card-desc">通过AI算法和数据分析，将任务需求和执行能力精准匹配，提高任务分配效率和完成质量。</p>
+                </div>
+                
+                <!-- 功能卡片 2 -->
+                <div class="platform-card animate-on-scroll delay-200">
+                    <div class="card-icon">
+                        <svg class="h-10 w-10 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">全流程管理</h3>
+                    <p class="card-desc">提供从任务创建、发布、接受、执行到验收的全流程管理工具，实时监控任务进展，确保高效完成。</p>
+                </div>
+                
+                <!-- 功能卡片 3 -->
+                <div class="platform-card animate-on-scroll delay-300">
+                    <div class="card-icon">
+                        <svg class="h-10 w-10 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path>
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">任务资产化</h3>
+                    <p class="card-desc">将完成的任务转化为数字资产，建立完整的价值评估体系，实现资产的流转和增值，创造持续收益。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价值主张 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="value-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">价值主张</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-100">
+                    <h3 class="text-2xl font-bold mb-4 text-white">对企业的价值</h3>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>降低人力资源成本，提高任务完成效率</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>优化资源配置，扩大人才池覆盖范围</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>将任务转化为可量化的资产，提升企业无形资产价值</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-200">
+                    <h3 class="text-2xl font-bold mb-4 text-white">对个人的价值</h3>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>提供灵活就业机会，实现技能变现</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>建立个人专业声誉和技能档案，提升职业竞争力</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>通过任务积累资产，获得长期价值收益</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作与加入 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="join-particles"></div>
+        <div class="container mx-auto px-4">
+            <div class="cta-container animate-on-scroll">
+                <h2 class="text-3xl font-bold mb-6">加入我们</h2>
+                <p class="text-gray-700 mb-8">
+                    无论您是需要发布任务的企业，还是寻找机会的个人，好主人平台都能为您提供专业的任务管理和资产化服务。立即加入我们，探索任务经济的无限可能。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="text-center">
+                        <div class="cta-button">
+                            <img src="../images/qrcode.svg" alt="微信二维码" class="h-32 mx-auto">
+                        </div>
+                        <p class="mt-3 text-sm text-white opacity-80">扫码咨询详情</p>
+                    </div>
+                    <div class="text-center flex flex-col justify-center space-y-4">
+                        <a href="#" class="btn-cta inline-block">
+                            <span>立即注册使用</span>
+                        </a>
+                        <a href="#" class="notion-button">
+                            <span class="mr-2">下载用户手册</span>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚区域添加动画 -->
+    <footer class="py-12 tech-gradient-section">
+        <div class="particles-container" id="footer-particles"></div>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="animate-on-scroll">
+                    <img src="../images/logo.svg" alt="城根商业" class="h-10 mb-4">
+                    <p class="text-gray-400">开启任务经济新纪元</p>
+                </div>
+                <div class="animate-on-scroll delay-100">
+                    <h4 class="text-lg font-semibold mb-4 text-white">平台</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html#academy-card" class="footer-link text-gray-400 hover:text-white">任务商学院</a></li>
+                        <li><a href="../index.html#goodmaster-card" class="footer-link text-gray-400 hover:text-white">好主人平台</a></li>
+                        <li><a href="../index.html#fund-card" class="footer-link text-gray-400 hover:text-white">任务基金</a></li>
+                    </ul>
+                </div>
+                <div class="animate-on-scroll delay-200">
+                    <h4 class="text-lg font-semibold mb-4 text-white">资源</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../docs.html" class="footer-link text-gray-400 hover:text-white">文档</a></li>
+                        <li><a href="../faq.html" class="footer-link text-gray-400 hover:text-white">常见问题</a></li>
+                        <li><a href="../blog.html" class="footer-link text-gray-400 hover:text-white">博客</a></li>
+                    </ul>
+                </div>
+                <div class="animate-on-scroll delay-300">
+                    <h4 class="text-lg font-semibold mb-4 text-white">法律</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../terms.html" class="footer-link text-gray-400 hover:text-white">服务条款</a></li>
+                        <li><a href="../privacy.html" class="footer-link text-gray-400 hover:text-white">隐私政策</a></li>
+                        <li><a href="../data-policy.html" class="footer-link text-gray-400 hover:text-white">数据协议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 animate-on-scroll">
+                <p>&copy; 2023 城根商业. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // 移动端菜单切换
+        function toggleMobileMenu() {
+            // 创建移动菜单
+            if (!document.querySelector('.mobile-menu')) {
+                const mobileMenu = document.createElement('div');
+                mobileMenu.className = 'mobile-menu fixed inset-0 tech-gradient-section z-40 p-4 flex flex-col';
+                mobileMenu.innerHTML = `
+                    <div class="flex justify-end">
+                        <button class="close-mobile-menu text-white" onclick="document.querySelector('.mobile-menu').remove()">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-center items-center space-y-6 text-xl">
+                        <a href="../index.html#academy-card" class="text-white hover:text-blue-300 transition-colors">任务商学院</a>
+                        <a href="../index.html#goodmaster-card" class="text-white hover:text-blue-300 transition-colors">好主人</a>
+                        <a href="../index.html#fund-card" class="text-white hover:text-blue-300 transition-colors">任务基金</a>
+                        <a href="../about.html" class="text-white hover:text-blue-300 transition-colors">关于我们</a>
+                        <a href="../join.html" class="text-white hover:text-blue-300 transition-colors">加入我们</a>
+                        <div class="flex mt-8 space-x-4">
+                            <a href="../register.html" class="btn btn-outline">注册</a>
+                            <a href="../login.html" class="btn btn-primary">登录</a>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(mobileMenu);
+            } else {
+                document.querySelector('.mobile-menu').remove();
+            }
+        }
+    </script>
+</body>
+</html> 

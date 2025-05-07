@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基金退出/回购 - 案例详情</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#081b29">
+</head>
+<body class="font-sans text-gray-900 bg-white scroll-smooth">
+    <div class="page-transition-mask"></div>
+    
+    <!-- 顶部导航栏 -->
+    <nav class="fixed top-0 w-full bg-opacity-95 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- LOGO -->
+            <a href="../index.html" class="flex items-center">
+                <img src="../images/logo.png" alt="城根商业" class="h-12">
+                <span class="ml-3 text-xl font-bold text-white">城根商业</span>
+            </a>
+            
+            <!-- 导航链接 -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html#academy-card" class="nav-link text-white">任务商学院</a>
+                <a href="../index.html#goodmaster-card" class="nav-link text-white">好主人</a>
+                <a href="../index.html#fund-card" class="nav-link text-white">任务基金</a>
+                <a href="../about.html" class="nav-link text-white">关于我们</a>
+                <a href="../join.html" class="nav-link text-white">加入我们</a>
+            </div>
+            
+            <!-- 右侧按钮 -->
+            <div class="flex items-center space-x-4">
+                <a href="../register.html" class="btn btn-outline">注册</a>
+                <a href="../login.html" class="btn btn-primary">登录</a>
+                <div class="relative language-switcher">
+                    <button class="flex items-center text-white">
+                        <span>中文</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button class="md:hidden menu-button text-white" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主横幅区域 -->
+    <section class="hero-section tech-gradient-section scroll-section" style="min-height: 70vh;">
+        <div class="particles-container" id="hero-particles"></div>
+        <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="card-icon mx-auto mb-6" style="width: 120px; height: 120px;">
+                    <img src="../images/use-case-4.svg" alt="基金退出/回购" class="h-16 w-16">
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 hero-title">
+                    基金退出/回购
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 hero-subtitle">任务资产完成后的价值实现机制，为投资者提供稳定可预期的退出路径</p>
+            </div>
+        </div>
+
+        <!-- 动态背景元素 -->
+        <div class="hero-bg-glow"></div>
+        <div class="parallax-bg parallax-element" data-speed="0.5"></div>
+    </section>
+
+    <!-- 场景概述 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="overview-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">场景概述</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll">
+                    <p class="text-gray-200 leading-relaxed">
+                        基金退出/回购是任务经济生态中的关键价值实现环节，为任务资产的投资者提供确定性的退出路径。通过预设的回购协议、二级市场交易或其他退出机制，任务资产在完成后能够按照既定规则实现价值兑现，确保投资者获得预期回报，同时促进资本在任务经济生态中的高效流动，形成可持续的投融资循环。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用流程 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="process-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">应用流程</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 gap-8">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-100">
+                    <h3 class="text-2xl font-bold mb-4 text-white">退出机制设计</h3>
+                    <p class="text-gray-200 leading-relaxed">
+                        在任务资产形成初期，设计明确的退出机制和价值兑现路径，包括回购协议、市场交易、价值分配等方式。根据不同类型的任务资产特性，制定相应的价值评估标准和退出时间表，确保退出机制的可行性和透明度。
+                    </p>
+                </div>
+                
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-200">
+                    <h3 class="text-2xl font-bold mb-4 text-white">价值确认与兑现</h3>
+                    <p class="text-gray-200 leading-relaxed">
+                        随着任务资产的完成或价值实现，平台通过既定的评估体系确认资产最终价值。根据预设的退出机制，投资者可选择通过回购、转让或分红等方式实现投资回报。平台提供完整的交易撮合、资金清算和合规管理服务，确保价值兑现过程的安全与高效。
+                    </p>
+                </div>
+                
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-300">
+                    <h3 class="text-2xl font-bold mb-4 text-white">价值再循环</h3>
+                    <p class="text-gray-200 leading-relaxed">
+                        退出后的资金可以重新投入任务经济生态，形成资本的良性循环。投资者可以基于过往的投资经验和回报数据，优化投资组合和策略，选择新的任务资产进行投资。平台持续提供数据分析和投资建议，促进资本高效配置和价值最大化。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例展示 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="case-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">案例展示</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll">
+                    <h3 class="text-2xl font-bold mb-4 text-white">内容创作任务资产退出计划</h3>
+                    <p class="text-gray-200 mb-8 leading-relaxed">
+                        某专业内容创作团队通过城根商业平台将其系列专业培训内容以任务资产形式进行了融资，设计了预定回购和分成两种退出模式。投资者在项目初期投入资金支持内容开发和营销，随着内容产生持续收入，平台按照预设规则执行了回购和分成，为投资者带来了可观回报。
+                    </p>
+                    
+                    <h4 class="text-xl font-bold mb-2 text-white">实施效果</h4>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>投资者获得22%的年化回报率，高于传统投资工具</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>内容创作团队获得了低成本融资，避免了早期股权稀释</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>85%的投资者选择将回报再投资于平台上的其他任务资产</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8 p-6 bg-opacity-10 bg-blue-500 rounded-xl">
+                        <p class="text-gray-300 italic">
+                            "任务资产的回购机制给了我们作为投资者前所未有的确定性和流动性。与传统内容投资相比，我们可以更精准地评估风险和回报，也能更灵活地管理投资组合。"
+                            <br>— 资深天使投资人
+                        </p>
+                    </div>
+                    
+                    <p class="text-sm text-gray-400 mt-4 italic">
+                        * 备注：本案例为虚构，仅供参考
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价值分析 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="value-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">价值分析</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-100">
+                    <h3 class="text-2xl font-bold mb-4 text-white">对投资者的价值</h3>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>提供明确的价值兑现路径和时间表</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>降低投资流动性风险，提高资金使用效率</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>创造可预期的回报模式，优化投资组合</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-200">
+                    <h3 class="text-2xl font-bold mb-4 text-white">对资产方的价值</h3>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>获得低成本、非稀释性的任务融资渠道</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>利用预设退出机制吸引更多投资者</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>根据任务完成情况灵活安排资金回报</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作与咨询 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="contact-particles"></div>
+        <div class="container mx-auto px-4">
+            <div class="cta-container animate-on-scroll">
+                <h2 class="text-3xl font-bold mb-6">合作咨询</h2>
+                <p class="text-gray-700 mb-8">
+                    如果您是投资者或任务资产持有方，希望了解更多关于基金退出/回购机制的信息，请联系我们的投资服务团队，获取定制化解决方案。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="text-center">
+                        <div class="cta-button">
+                            <img src="../images/qrcode.svg" alt="微信二维码" class="h-32 mx-auto">
+                        </div>
+                        <p class="mt-3 text-sm text-white opacity-80">扫码咨询详情</p>
+                    </div>
+                    <div class="text-center flex flex-col justify-center space-y-4">
+                        <a href="#" class="btn-cta inline-block">
+                            <span>预约投资顾问</span>
+                        </a>
+                        <a href="#" class="notion-button">
+                            <span class="mr-2">下载投资指南</span>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚区域 -->
+    <footer class="py-12 tech-gradient-section">
+        <div class="particles-container" id="footer-particles"></div>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="animate-on-scroll">
+                    <img src="../images/logo.svg" alt="城根商业" class="h-10 mb-4">
+                    <p class="text-gray-400">开启任务经济新纪元</p>
+                </div>
+                <div class="animate-on-scroll delay-100">
+                    <h4 class="text-lg font-semibold mb-4 text-white">平台</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html#academy-card" class="footer-link text-gray-400 hover:text-white">任务商学院</a></li>
+                        <li><a href="../index.html#goodmaster-card" class="footer-link text-gray-400 hover:text-white">好主人平台</a></li>
+                        <li><a href="../index.html#fund-card" class="footer-link text-gray-400 hover:text-white">任务基金</a></li>
+                    </ul>
+                </div>
+                <div class="animate-on-scroll delay-200">
+                    <h4 class="text-lg font-semibold mb-4 text-white">资源</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../docs.html" class="footer-link text-gray-400 hover:text-white">文档</a></li>
+                        <li><a href="../faq.html" class="footer-link text-gray-400 hover:text-white">常见问题</a></li>
+                        <li><a href="../blog.html" class="footer-link text-gray-400 hover:text-white">博客</a></li>
+                    </ul>
+                </div>
+                <div class="animate-on-scroll delay-300">
+                    <h4 class="text-lg font-semibold mb-4 text-white">法律</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../terms.html" class="footer-link text-gray-400 hover:text-white">服务条款</a></li>
+                        <li><a href="../privacy.html" class="footer-link text-gray-400 hover:text-white">隐私政策</a></li>
+                        <li><a href="../data-policy.html" class="footer-link text-gray-400 hover:text-white">数据协议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 animate-on-scroll">
+                <p>&copy; 2023 城根商业. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // 移动端菜单切换
+        function toggleMobileMenu() {
+            if (!document.querySelector('.mobile-menu')) {
+                const mobileMenu = document.createElement('div');
+                mobileMenu.className = 'mobile-menu fixed inset-0 tech-gradient-section z-40 p-4 flex flex-col';
+                mobileMenu.innerHTML = `
+                    <div class="flex justify-end">
+                        <button class="close-mobile-menu text-white" onclick="document.querySelector('.mobile-menu').remove()">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-center items-center space-y-6 text-xl">
+                        <a href="../index.html#academy-card" class="text-white hover:text-blue-300 transition-colors">任务商学院</a>
+                        <a href="../index.html#goodmaster-card" class="text-white hover:text-blue-300 transition-colors">好主人</a>
+                        <a href="../index.html#fund-card" class="text-white hover:text-blue-300 transition-colors">任务基金</a>
+                        <a href="../about.html" class="text-white hover:text-blue-300 transition-colors">关于我们</a>
+                        <a href="../join.html" class="text-white hover:text-blue-300 transition-colors">加入我们</a>
+                        <div class="flex mt-8 space-x-4">
+                            <a href="../register.html" class="btn btn-outline">注册</a>
+                            <a href="../login.html" class="btn btn-primary">登录</a>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(mobileMenu);
+            } else {
+                document.querySelector('.mobile-menu').remove();
+            }
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教育项目资产化 - 案例详情</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- 添加思源黑体字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#081b29">
+</head>
+<body class="font-sans text-gray-900 bg-white scroll-smooth">
+    <!-- 页面过渡遮罩 -->
+    <div class="page-transition-mask"></div>
+    
+    <!-- 顶部导航栏 -->
+    <nav class="fixed top-0 w-full bg-opacity-95 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- LOGO -->
+            <a href="../index.html" class="flex items-center">
+                <img src="../images/logo.png" alt="城根商业" class="h-12">
+                <span class="ml-3 text-xl font-bold text-white">城根商业</span>
+            </a>
+            
+            <!-- 导航链接 -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html#academy-card" class="nav-link text-white">任务商学院</a>
+                <a href="../index.html#goodmaster-card" class="nav-link text-white">好主人</a>
+                <a href="../index.html#fund-card" class="nav-link text-white">任务基金</a>
+                <a href="../about.html" class="nav-link text-white">关于我们</a>
+                <a href="../join.html" class="nav-link text-white">加入我们</a>
+            </div>
+            
+            <!-- 右侧按钮 -->
+            <div class="flex items-center space-x-4">
+                <a href="../register.html" class="btn btn-outline">注册</a>
+                <a href="../login.html" class="btn btn-primary">登录</a>
+                <div class="relative language-switcher">
+                    <button class="flex items-center text-white">
+                        <span>中文</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button class="md:hidden menu-button text-white" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主横幅区域 -->
+    <section class="hero-section tech-gradient-section scroll-section" style="min-height: 70vh;">
+        <div class="particles-container" id="hero-particles"></div>
+        <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="card-icon mx-auto mb-6" style="width: 120px; height: 120px;">
+                    <img src="../images/use-case-2.svg" alt="教育项目资产化" class="h-16 w-16">
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 hero-title">
+                    教育项目资产化
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 hero-subtitle">将教育培训项目转化为可转让的任务资产，实现教育价值的可持续流转与增值</p>
+            </div>
+        </div>
+
+        <!-- 动态背景元素 -->
+        <div class="hero-bg-glow"></div>
+        <div class="parallax-bg parallax-element" data-speed="0.5"></div>
+    </section>
+
+    <!-- 场景概述 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="overview-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">场景概述</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll">
+                    <p class="text-gray-200 leading-relaxed">
+                        教育项目资产化是指将教育培训项目通过任务化、标准化处理，转化为可量化、可交易、可持续创造价值的任务资产的过程。教育机构可以将其课程、培训项目或教学内容通过平台标准化为任务，经过质量验证和价值评估后，形成具有明确价值的教育资产，可以实现流转、交易和价值增长，为教育内容创造者提供长期的价值回报机制。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用流程 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="process-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">应用流程</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 gap-8">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-100">
+                    <h3 class="text-2xl font-bold mb-4 text-white">教育内容任务化</h3>
+                    <p class="text-gray-200 leading-relaxed">
+                        将教育培训内容按照平台标准拆解为明确的任务单元，包括学习目标、完成标准、验收方式和评价体系。内容可以是线上课程、线下培训、实践项目或专业技能训练等多种形式，通过平台进行标准化描述和结构化处理。
+                    </p>
+                </div>
+                
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-200">
+                    <h3 class="text-2xl font-bold mb-4 text-white">价值评估与资产化</h3>
+                    <p class="text-gray-200 leading-relaxed">
+                        平台根据教育内容的完成度、学习者反馈、市场需求和潜在价值等多维度指标，对任务进行价值评估和资产化处理。通过数据分析和市场验证，确定教育资产的初始价值和增长潜力，形成可交易的数字资产证明。
+                    </p>
+                </div>
+                
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-300">
+                    <h3 class="text-2xl font-bold mb-4 text-white">流转与价值实现</h3>
+                    <p class="text-gray-200 leading-relaxed">
+                        教育资产可在平台上进行多种形式的价值实现，包括授权使用、内容订阅、二次开发、机构采购等。资产持有者可以追踪资产的使用情况和价值变化，实现教育内容的长期价值回报，而使用者则获得高质量的教育资源和明确的学习成果。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例展示 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="case-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">案例展示</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll">
+                    <h3 class="text-2xl font-bold mb-4 text-white">职业技能培训课程资产化</h3>
+                    <p class="text-gray-200 mb-8 leading-relaxed">
+                        某知名在线教育机构将其深受欢迎的"数据分析师职业培训"系列课程通过城根商业平台进行任务资产化处理。该机构将课程内容拆分为多个具有明确学习目标和完成标准的任务单元，并接入平台的评估系统。
+                    </p>
+                    
+                    <h4 class="text-xl font-bold mb-2 text-white">实施效果</h4>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>课程完成率提升41%，学员满意度提高38%</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>课程内容授权收入增长153%，实现长期价值回报</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>企业客户采购增长67%，开辟了新的市场渠道</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8 p-6 bg-opacity-10 bg-blue-500 rounded-xl">
+                        <p class="text-gray-300 italic">
+                            "任务资产化模式为我们的教育内容提供了全新的价值实现路径。不仅大幅提升了学习效果，还将一次性销售转变为持续的价值流，彻底改变了我们的商业模式。"
+                            <br>— 在线教育机构产品总监
+                        </p>
+                    </div>
+                    
+                    <p class="text-sm text-gray-400 mt-4 italic">
+                        * 备注：本案例为虚构，仅供参考
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价值分析 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="value-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">价值分析</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-100">
+                    <h3 class="text-2xl font-bold mb-4 text-white">对教育机构的价值</h3>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>创造新的商业模式和收入来源</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>提高教育内容的标准化和质量</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>实现教育内容价值的长期可持续增长</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-200">
+                    <h3 class="text-2xl font-bold mb-4 text-white">对学习者的价值</h3>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>获得更加结构化、目标明确的学习体验</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>学习成果可量化，更易于职业规划和能力展示</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>接触到更高质量、不断更新的教育内容</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作与咨询 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="contact-particles"></div>
+        <div class="container mx-auto px-4">
+            <div class="cta-container animate-on-scroll">
+                <h2 class="text-3xl font-bold mb-6">合作咨询</h2>
+                <p class="text-gray-700 mb-8">
+                    如果您是教育机构、培训提供商或内容创作者，希望了解更多关于教育项目资产化的信息，或者有意向进行合作，请联系我们的教育行业团队，获取定制化解决方案。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="text-center">
+                        <div class="cta-button">
+                            <img src="../images/qrcode.svg" alt="微信二维码" class="h-32 mx-auto">
+                        </div>
+                        <p class="mt-3 text-sm text-white opacity-80">扫码咨询详情</p>
+                    </div>
+                    <div class="text-center flex flex-col justify-center space-y-4">
+                        <a href="#" class="btn-cta inline-block">
+                            <span>预约方案演示</span>
+                        </a>
+                        <a href="#" class="notion-button">
+                            <span class="mr-2">下载教育资产化白皮书</span>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚区域添加动画 -->
+    <footer class="py-12 tech-gradient-section">
+        <div class="particles-container" id="footer-particles"></div>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="animate-on-scroll">
+                    <img src="../images/logo.svg" alt="城根商业" class="h-10 mb-4">
+                    <p class="text-gray-400">开启任务经济新纪元</p>
+                </div>
+                <div class="animate-on-scroll delay-100">
+                    <h4 class="text-lg font-semibold mb-4 text-white">平台</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html#academy-card" class="footer-link text-gray-400 hover:text-white">任务商学院</a></li>
+                        <li><a href="../index.html#goodmaster-card" class="footer-link text-gray-400 hover:text-white">好主人平台</a></li>
+                        <li><a href="../index.html#fund-card" class="footer-link text-gray-400 hover:text-white">任务基金</a></li>
+                    </ul>
+                </div>
+                <div class="animate-on-scroll delay-200">
+                    <h4 class="text-lg font-semibold mb-4 text-white">资源</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../docs.html" class="footer-link text-gray-400 hover:text-white">文档</a></li>
+                        <li><a href="../faq.html" class="footer-link text-gray-400 hover:text-white">常见问题</a></li>
+                        <li><a href="../blog.html" class="footer-link text-gray-400 hover:text-white">博客</a></li>
+                    </ul>
+                </div>
+                <div class="animate-on-scroll delay-300">
+                    <h4 class="text-lg font-semibold mb-4 text-white">法律</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../terms.html" class="footer-link text-gray-400 hover:text-white">服务条款</a></li>
+                        <li><a href="../privacy.html" class="footer-link text-gray-400 hover:text-white">隐私政策</a></li>
+                        <li><a href="../data-policy.html" class="footer-link text-gray-400 hover:text-white">数据协议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 animate-on-scroll">
+                <p>&copy; 2023 城根商业. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // 移动端菜单切换
+        function toggleMobileMenu() {
+            // 创建移动菜单
+            if (!document.querySelector('.mobile-menu')) {
+                const mobileMenu = document.createElement('div');
+                mobileMenu.className = 'mobile-menu fixed inset-0 tech-gradient-section z-40 p-4 flex flex-col';
+                mobileMenu.innerHTML = `
+                    <div class="flex justify-end">
+                        <button class="close-mobile-menu text-white" onclick="document.querySelector('.mobile-menu').remove()">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-center items-center space-y-6 text-xl">
+                        <a href="../index.html#academy-card" class="text-white hover:text-blue-300 transition-colors">任务商学院</a>
+                        <a href="../index.html#goodmaster-card" class="text-white hover:text-blue-300 transition-colors">好主人</a>
+                        <a href="../index.html#fund-card" class="text-white hover:text-blue-300 transition-colors">任务基金</a>
+                        <a href="../about.html" class="text-white hover:text-blue-300 transition-colors">关于我们</a>
+                        <a href="../join.html" class="text-white hover:text-blue-300 transition-colors">加入我们</a>
+                        <div class="flex mt-8 space-x-4">
+                            <a href="../register.html" class="btn btn-outline">注册</a>
+                            <a href="../login.html" class="btn btn-primary">登录</a>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(mobileMenu);
+            } else {
+                document.querySelector('.mobile-menu').remove();
+            }
+        }
+    </script>
+</body>
+</html> 

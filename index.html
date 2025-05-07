@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>城根商业 - 开启任务型资产的价值新纪元</title>
+    <title>城根商业 - 开启任务经济新纪元</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <!-- 添加思源黑体字体 -->
@@ -19,7 +19,7 @@
     <nav class="fixed top-0 w-full bg-opacity-95 z-50">
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
             <!-- LOGO -->
-            <a href="/" class="flex items-center">
+            <a href="index.html" class="flex items-center">
                 <img src="images/logo.png" alt="城根商业" class="h-12">
                 <span class="ml-3 text-xl font-bold text-white">城根商业</span>
             </a>
@@ -29,14 +29,14 @@
                 <a href="#academy-card" class="nav-link text-white">任务商学院</a>
                 <a href="#goodmaster-card" class="nav-link text-white">好主人</a>
                 <a href="#fund-card" class="nav-link text-white">任务基金</a>
-                <a href="/about" class="nav-link text-white">关于我们</a>
-                <a href="/join" class="nav-link text-white">加入我们</a>
+                <a href="about.html" class="nav-link text-white">关于我们</a>
+                <a href="join.html" class="nav-link text-white">加入我们</a>
             </div>
             
             <!-- 右侧按钮 -->
             <div class="flex items-center space-x-4">
-                <a href="/register" class="btn btn-outline">注册</a>
-                <a href="/login" class="btn btn-primary">登录</a>
+                <a href="register.html" class="btn btn-outline">注册</a>
+                <a href="login.html" class="btn btn-primary">登录</a>
                 <div class="relative language-switcher">
                     <button class="flex items-center text-white">
                         <span>中文</span>
@@ -47,7 +47,7 @@
                 </div>
                 
                 <!-- 移动端菜单按钮 -->
-                <button class="md:hidden menu-button text-white">
+                <button class="md:hidden menu-button text-white" onclick="toggleMobileMenu()">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -62,11 +62,11 @@
         <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
             <div class="max-w-3xl mx-auto text-center">
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 hero-title">
-                    开启任务型资产的价值新纪元
+                    开启任务经济新纪元
                 </h1>
-                <p class="text-xl md:text-2xl mb-10 hero-subtitle">Empower the Future of Task-based Assets</p>
+                <p class="text-xl md:text-2xl mb-10 hero-subtitle">Launch the New Era of Task Economies</p>
                 <div class="animation-container my-12">
-                    <!-- 这里将放置任务→NFT→回购动效 -->
+                    <!-- 这里将放置任务→变现→退出动效 -->
                     <div class="flex justify-center items-center space-x-8">
                         <div class="animation-step">
                             <div class="icon-circle">任务</div>
@@ -76,15 +76,15 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
                         <div class="animation-step">
-                            <div class="icon-circle">NFT</div>
-                            <p class="mt-2">资产化</p>
+                            <div class="icon-circle">变现</div>
+                            <p class="mt-2">价值转化</p>
                         </div>
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
                         <div class="animation-step">
-                            <div class="icon-circle">回购</div>
-                            <p class="mt-2">价值释放</p>
+                            <div class="icon-circle">退出</div>
+                            <p class="mt-2">收益变现</p>
                         </div>
                     </div>
                 </div>
@@ -109,28 +109,28 @@
                         <img src="images/platform-1.svg" alt="任务商学院" class="h-12 w-12">
                     </div>
                     <h3 class="card-title">任务商学院</h3>
-                    <p class="card-desc">专注任务型资产研究与教育，培养行业人才，推动任务经济理论体系建设。</p>
-                    <a href="/platform#teu" class="card-btn">了解更多</a>
+                    <p class="card-desc">社会任务内容标准化、教育与公益型项目资产化孵化平台</p>
+                    <a href="platform/academy.html" class="card-btn">了解更多</a>
                 </div>
                 
                 <!-- 好主人平台 -->
-                <div id="goodmaster-card" class="platform-card animate-on-scroll delay-200">
+                <div class="platform-card animate-on-scroll" id="goodmaster-card">
                     <div class="card-icon">
-                        <img src="images/platform-2.svg" alt="好主人平台" class="h-12 w-12">
+                        <img src="images/platform-2.svg" alt="好主人平台" class="h-16 w-16">
                     </div>
                     <h3 class="card-title">好主人平台</h3>
                     <p class="card-desc">为企业和个人提供一站式任务发布、接受、管理和资产化服务的综合性平台。</p>
-                    <a href="/platform#haozhuren" class="card-btn">了解更多</a>
+                    <a href="platform/goodmaster.html" class="card-btn">了解更多</a>
                 </div>
                 
                 <!-- 任务基金 -->
-                <div id="fund-card" class="platform-card animate-on-scroll delay-300">
+                <div class="platform-card animate-on-scroll" id="fund-card">
                     <div class="card-icon">
-                        <img src="images/platform-3.svg" alt="任务基金" class="h-12 w-12">
+                        <img src="images/platform-3.svg" alt="任务基金" class="h-16 w-16">
                     </div>
                     <h3 class="card-title">任务基金</h3>
                     <p class="card-desc">专注于任务型资产投资、管理与退出的创新基金，为资产提供流动性与价值管理。</p>
-                    <a href="/platform#fund" class="card-btn">了解更多</a>
+                    <a href="platform/fund.html" class="card-btn">了解更多</a>
                 </div>
             </div>
         </div>
@@ -141,34 +141,77 @@
         <div class="particles-container" id="usecase-particles"></div>
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 platform-section-title animate-on-scroll">应用场景</h2>
-            <div class="use-case-slider">
-                <!-- 场景卡片，添加动画类和延迟 -->
-                <div class="use-case-card animate-on-scroll delay-100">
-                    <img src="images/use-case-1.svg" alt="数字艺术品" class="use-case-icon">
-                    <h3 class="use-case-title">数字艺术品</h3>
-                    <p class="use-case-desc">艺术创作者可以发布创作任务，将作品转化为NFT进行交易和收藏。</p>
-                    <a href="/cases#art" class="use-case-btn">了解案例</a>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- 使用场景卡片1 -->
+                <div class="use-case-card">
+                    <div class="use-case-inner">
+                        <div class="use-case-front">
+                            <div class="card-icon">
+                                <img src="images/use-case-1.svg" alt="政府任务采购" class="h-16 w-16">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">政府任务采购 (托管模式)</h3>
+                            <p class="text-sm">政府部门通过平台发布公共服务任务，实现透明化管理与资产化运营</p>
+                            <a href="cases/government.html" class="use-case-btn">了解案例</a>
+                        </div>
+                        <div class="use-case-back">
+                            <p>通过任务采购模式，政府部门可以将公共服务需求标准化发布，由平台托管执行和监督，实现全流程数字化管理，提高服务质量和资源配置效率。</p>
+                            <a href="cases/government.html" class="use-case-btn">了解案例</a>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="use-case-card animate-on-scroll delay-200">
-                    <img src="images/use-case-2.svg" alt="企业服务" class="use-case-icon">
-                    <h3 class="use-case-title">企业服务</h3>
-                    <p class="use-case-desc">企业可以将服务任务资产化，形成可交易的服务承诺，提高服务效率。</p>
-                    <a href="/cases#business" class="use-case-btn">了解案例</a>
+
+                <!-- 使用场景卡片2 -->
+                <div class="use-case-card">
+                    <div class="use-case-inner">
+                        <div class="use-case-front">
+                            <div class="card-icon">
+                                <img src="images/use-case-2.svg" alt="教育项目资产化" class="h-16 w-16">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">教育项目资产化</h3>
+                            <p class="text-sm">将教育培训项目转化为可转让的任务资产，实现教育价值的可持续流转与增值</p>
+                            <a href="cases/education.html" class="use-case-btn">了解案例</a>
+                        </div>
+                        <div class="use-case-back">
+                            <p>教育机构可以将培训课程和教学内容通过任务化处理，转变为可度量、可交易的资产，创造新的商业模式和价值实现路径，同时为学习者提供更有效的学习体验。</p>
+                            <a href="cases/education.html" class="use-case-btn">了解案例</a>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="use-case-card animate-on-scroll delay-300">
-                    <img src="images/use-case-3.svg" alt="知识产权" class="use-case-icon">
-                    <h3 class="use-case-title">知识产权</h3>
-                    <p class="use-case-desc">知识产权可以通过任务形式进行授权，建立更加透明的版权交易体系。</p>
-                    <a href="/cases#ip" class="use-case-btn">了解案例</a>
+
+                <!-- 使用场景卡片3 -->
+                <div class="use-case-card">
+                    <div class="use-case-inner">
+                        <div class="use-case-front">
+                            <div class="card-icon">
+                                <img src="images/use-case-3.svg" alt="B端平台合作流转" class="h-16 w-16">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">B端平台合作流转</h3>
+                            <p class="text-sm">企业间任务资产的流转与合作，打破传统商业合作边界，创造全新协同价值</p>
+                            <a href="/cases/b2b.html" class="use-case-btn">了解案例</a>
+                        </div>
+                        <div class="use-case-back">
+                            <p>企业可以将自身业务能力和服务产品任务化，在平台上与其他企业进行对接和流转，实现更加精准、高效的合作，共同创造和分享新的商业价值。</p>
+                            <a href="/cases/b2b.html" class="use-case-btn">了解案例</a>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="use-case-card animate-on-scroll delay-400">
-                    <img src="images/use-case-4.svg" alt="社区治理" class="use-case-icon">
-                    <h3 class="use-case-title">社区治理</h3>
-                    <p class="use-case-desc">社区通过任务型资产实现高效治理，激励成员参与公共事务。</p>
-                    <a href="/cases#community" class="use-case-btn">了解案例</a>
+
+                <!-- 使用场景卡片4 -->
+                <div class="use-case-card">
+                    <div class="use-case-inner">
+                        <div class="use-case-front">
+                            <div class="card-icon">
+                                <img src="images/use-case-4.svg" alt="基金退出/回购" class="h-16 w-16">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">基金退出/回购</h3>
+                            <p class="text-sm">任务资产完成后的价值实现机制，为投资者提供稳定可预期的退出路径</p>
+                            <a href="cases/fund_exit.html" class="use-case-btn">了解案例</a>
+                        </div>
+                        <div class="use-case-back">
+                            <p>通过预设的回购协议和退出机制，任务资产投资者可以在资产价值实现后获得确定的回报，形成可持续的投融资循环，促进任务经济生态的繁荣发展。</p>
+                            <a href="cases/fund_exit.html" class="use-case-btn">了解案例</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -210,30 +253,30 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="animate-on-scroll">
                     <img src="images/logo.svg" alt="城根商业" class="h-10 mb-4">
-                    <p class="text-gray-400">开启任务型资产的价值新纪元</p>
+                    <p class="text-gray-400">开启任务经济新纪元</p>
                 </div>
                 <div class="animate-on-scroll delay-100">
                     <h4 class="text-lg font-semibold mb-4 text-white">平台</h4>
                     <ul class="space-y-2">
-                        <li><a href="/platform#teu" class="footer-link text-gray-400 hover:text-white">任务经济大学</a></li>
-                        <li><a href="/platform#haozhuren" class="footer-link text-gray-400 hover:text-white">好主人平台</a></li>
-                        <li><a href="/platform#fund" class="footer-link text-gray-400 hover:text-white">任务基金</a></li>
+                        <li><a href="#academy-card" class="footer-link text-gray-400 hover:text-white">任务商学院</a></li>
+                        <li><a href="#goodmaster-card" class="footer-link text-gray-400 hover:text-white">好主人平台</a></li>
+                        <li><a href="#fund-card" class="footer-link text-gray-400 hover:text-white">任务基金</a></li>
                     </ul>
                 </div>
                 <div class="animate-on-scroll delay-200">
                     <h4 class="text-lg font-semibold mb-4 text-white">资源</h4>
                     <ul class="space-y-2">
-                        <li><a href="/docs" class="footer-link text-gray-400 hover:text-white">文档</a></li>
-                        <li><a href="/faq" class="footer-link text-gray-400 hover:text-white">常见问题</a></li>
-                        <li><a href="/blog" class="footer-link text-gray-400 hover:text-white">博客</a></li>
+                        <li><a href="docs.html" class="footer-link text-gray-400 hover:text-white">文档</a></li>
+                        <li><a href="faq.html" class="footer-link text-gray-400 hover:text-white">常见问题</a></li>
+                        <li><a href="blog.html" class="footer-link text-gray-400 hover:text-white">博客</a></li>
                     </ul>
                 </div>
                 <div class="animate-on-scroll delay-300">
                     <h4 class="text-lg font-semibold mb-4 text-white">法律</h4>
                     <ul class="space-y-2">
-                        <li><a href="/terms" class="footer-link text-gray-400 hover:text-white">服务条款</a></li>
-                        <li><a href="/privacy" class="footer-link text-gray-400 hover:text-white">隐私政策</a></li>
-                        <li><a href="/data-policy" class="footer-link text-gray-400 hover:text-white">数据协议</a></li>
+                        <li><a href="terms.html" class="footer-link text-gray-400 hover:text-white">服务条款</a></li>
+                        <li><a href="privacy.html" class="footer-link text-gray-400 hover:text-white">隐私政策</a></li>
+                        <li><a href="data-policy.html" class="footer-link text-gray-400 hover:text-white">数据协议</a></li>
                     </ul>
                 </div>
             </div>
@@ -244,5 +287,38 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // 移动端菜单切换
+        function toggleMobileMenu() {
+            // 创建移动菜单
+            if (!document.querySelector('.mobile-menu')) {
+                const mobileMenu = document.createElement('div');
+                mobileMenu.className = 'mobile-menu fixed inset-0 tech-gradient-section z-40 p-4 flex flex-col';
+                mobileMenu.innerHTML = `
+                    <div class="flex justify-end">
+                        <button class="close-mobile-menu text-white" onclick="document.querySelector('.mobile-menu').remove()">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-center items-center space-y-6 text-xl">
+                        <a href="#academy-card" class="text-white hover:text-blue-300 transition-colors">任务商学院</a>
+                        <a href="#goodmaster-card" class="text-white hover:text-blue-300 transition-colors">好主人</a>
+                        <a href="#fund-card" class="text-white hover:text-blue-300 transition-colors">任务基金</a>
+                        <a href="about.html" class="text-white hover:text-blue-300 transition-colors">关于我们</a>
+                        <a href="join.html" class="text-white hover:text-blue-300 transition-colors">加入我们</a>
+                        <div class="flex mt-8 space-x-4">
+                            <a href="register.html" class="btn btn-outline">注册</a>
+                            <a href="login.html" class="btn btn-primary">登录</a>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(mobileMenu);
+            } else {
+                document.querySelector('.mobile-menu').remove();
+            }
+        }
+    </script>
 </body>
 </html> 
