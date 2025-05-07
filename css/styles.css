@@ -1073,4 +1073,36 @@ p {
 /* 平台卡片描述文本 */
 .card-desc {
     color: rgba(255, 255, 255, 0.9);
+}
+
+/* 平台卡片高亮效果 */
+.platform-highlight {
+    transform: translateY(-10px) scale(1.05) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(52, 152, 219, 0.8) !important;
+    border: 1px solid rgba(52, 152, 219, 0.6) !important;
+    z-index: 10;
+    position: relative;
+    animation: highlightPulse 2s infinite alternate;
+}
+
+.platform-highlight .card-icon {
+    transform: scale(1.2) rotate(10deg) !important;
+}
+
+.platform-highlight .card-title {
+    text-shadow: 0 0 15px rgba(52, 152, 219, 0.8);
+}
+
+.platform-highlight .card-btn {
+    background: rgba(52, 152, 219, 0.8) !important;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+}
+
+@keyframes highlightPulse {
+    0% {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(52, 152, 219, 0.6);
+    }
+    100% {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 30px rgba(52, 152, 219, 1);
+    }
 } 

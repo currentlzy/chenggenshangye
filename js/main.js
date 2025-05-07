@@ -168,14 +168,37 @@ function setupSmoothScroll() {
             mask.className = 'page-transition-mask';
             document.body.appendChild(mask);
             
+            // 首先取消所有卡片的高亮效果
+            document.querySelectorAll('.platform-card').forEach(card => {
+                card.classList.remove('platform-highlight');
+            });
+            
             setTimeout(() => {
                 mask.classList.add('active');
                 
                 setTimeout(() => {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+                    // 检查是否是平台卡片
+                    const isPlatformCard = ['#academy-card', '#goodmaster-card', '#fund-card'].includes(targetId);
+                    
+                    // 如果是平台卡片，滚动到平台部分的顶部
+                    if (isPlatformCard) {
+                        const platformSection = document.querySelector('#platform-section');
+                        window.scrollTo({
+                            top: platformSection.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // 为目标卡片添加高亮效果
+                        setTimeout(() => {
+                            targetElement.classList.add('platform-highlight');
+                        }, 500);
+                    } else {
+                        // 正常滚动到目标位置
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
                     
                     setTimeout(() => {
                         mask.classList.remove('active');
@@ -490,24 +513,31 @@ function setupParallaxEffect() {
 // 移动端菜单
 function setupMobileMenu() {
     const menuButton = document.querySelector('.menu-button');
-    const navLinks = document.querySelector('.md\\:flex');
     
-    if (menuButton && navLinks) {
+    if (menuButton) {
         menuButton.addEventListener('click', function() {
             // 创建移动菜单
             if (!document.querySelector('.mobile-menu')) {
                 const mobileMenu = document.createElement('div');
-                mobileMenu.className = 'mobile-menu fixed inset-0 bg-white z-40 p-4 flex flex-col';
+                mobileMenu.className = 'mobile-menu fixed inset-0 tech-gradient-section z-40 p-4 flex flex-col';
                 mobileMenu.innerHTML = `
                     <div class="flex justify-end">
-                        <button class="close-mobile-menu">
+                        <button class="close-mobile-menu text-white">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
                         </button>
                     </div>
                     <div class="flex-1 flex flex-col justify-center items-center space-y-6 text-xl">
-                        ${navLinks.innerHTML}
+                        <a href="#academy-card" class="text-white hover:text-blue-300 transition-colors">任务商学院</a>
+                        <a href="#goodmaster-card" class="text-white hover:text-blue-300 transition-colors">好主人</a>
+                        <a href="#fund-card" class="text-white hover:text-blue-300 transition-colors">任务基金</a>
+                        <a href="/about" class="text-white hover:text-blue-300 transition-colors">关于我们</a>
+                        <a href="/join" class="text-white hover:text-blue-300 transition-colors">加入我们</a>
+                        <div class="flex mt-8 space-x-4">
+                            <a href="/register" class="btn btn-outline">注册</a>
+                            <a href="/login" class="btn btn-primary">登录</a>
+                        </div>
                     </div>
                 `;
                 document.body.appendChild(mobileMenu);
