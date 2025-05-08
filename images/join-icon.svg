@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="90" fill="#1E40AF" opacity="0.2"/>
+  <circle cx="100" cy="100" r="70" stroke="#4F6BFF" stroke-width="4" stroke-dasharray="10 10"/>
+  
+  <!-- 人物形象组 -->
+  <g transform="translate(55, 55)">
+    <!-- 人物1 -->
+    <circle cx="25" cy="20" r="12" fill="#3B82F6"/>
+    <path d="M15 40C15 30 35 30 35 40L35 60 C35 65, 15 65, 15 60 Z" fill="#3B82F6"/>
+    
+    <!-- 人物2 -->
+    <circle cx="65" cy="20" r="12" fill="#60A5FA"/>
+    <path d="M55 40C55 30 75 30 75 40L75 60 C75 65, 55 65, 55 60 Z" fill="#60A5FA"/>
+    
+    <!-- 连接线 -->
+    <line x1="35" y1="40" x2="55" y2="40" stroke="#93C5FD" stroke-width="4"/>
+  </g>
+  
+  <!-- 外围装饰元素 -->
+  <circle cx="100" cy="30" r="8" fill="#3B82F6" opacity="0.7"/>
+  <circle cx="170" cy="100" r="8" fill="#3B82F6" opacity="0.7"/>
+  <circle cx="100" cy="170" r="8" fill="#3B82F6" opacity="0.7"/>
+  <circle cx="30" cy="100" r="8" fill="#3B82F6" opacity="0.7"/>
+  
+  <circle cx="135" cy="45" r="6" fill="#60A5FA" opacity="0.5"/>
+  <circle cx="155" cy="155" r="6" fill="#60A5FA" opacity="0.5"/>
+  <circle cx="45" cy="155" r="6" fill="#60A5FA" opacity="0.5"/>
+  <circle cx="45" cy="45" r="6" fill="#60A5FA" opacity="0.5"/>
+</svg> 

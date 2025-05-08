@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加入我们 - 城根商业</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- 添加思源黑体字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#081b29">
+</head>
+<body class="font-sans text-gray-900 bg-white scroll-smooth">
+    <!-- 页面过渡遮罩 -->
+    <div class="page-transition-mask"></div>
+    
+    <!-- 顶部导航栏 -->
+    <nav class="fixed top-0 w-full bg-opacity-95 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- LOGO -->
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="城根商业" class="h-12">
+                <span class="ml-3 text-xl font-bold text-white">城根商业</span>
+            </a>
+            
+            <!-- 导航链接 -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#academy-card" class="nav-link text-white">任务商学院</a>
+                <a href="index.html#goodmaster-card" class="nav-link text-white">好主人</a>
+                <a href="index.html#fund-card" class="nav-link text-white">任务基金</a>
+                <a href="about.html" class="nav-link text-white">关于我们</a>
+                <a href="join.html" class="nav-link text-white">加入我们</a>
+            </div>
+            
+            <!-- 右侧按钮 -->
+            <div class="flex items-center space-x-4">
+                <a href="register.html" class="btn btn-outline">注册</a>
+                <a href="login.html" class="btn btn-primary">登录</a>
+                <div class="relative language-switcher">
+                    <button class="flex items-center text-white">
+                        <span>中文</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button class="md:hidden menu-button text-white" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主横幅区域 -->
+    <section class="hero-section tech-gradient-section scroll-section" style="min-height: 70vh;">
+        <div class="particles-container" id="hero-particles"></div>
+        <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="card-icon mx-auto mb-6" style="width: 120px; height: 120px;">
+                    <img src="images/join-icon.svg" alt="加入我们" class="h-16 w-16">
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 hero-title">
+                    加入我们
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 hero-subtitle">成为任务经济时代的先行者</p>
+            </div>
+        </div>
+
+        <!-- 动态背景元素 -->
+        <div class="hero-bg-glow"></div>
+        <div class="parallax-bg parallax-element" data-speed="0.5"></div>
+    </section>
+
+    <!-- 团队文化 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="culture-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">我们的文化</h2>
+            <div class="max-w-4xl mx-auto mt-10">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll">
+                    <h3 class="text-2xl font-bold mb-4 text-white">使命驱动</h3>
+                    <p class="text-gray-200 mb-8 leading-relaxed">
+                        我们相信任务经济的未来，致力于创造一个人人可参与、可信任、具备价值流动机制的社会系统。每一位团队成员都是这一使命的坚定践行者。
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold mb-4 text-white">创新思维</h3>
+                    <p class="text-gray-200 mb-8 leading-relaxed">
+                        我们鼓励突破传统思维的束缚，用创新的方式解决问题。在城根商业，好奇心和探索精神是我们最宝贵的资产。
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold mb-4 text-white">协作共赢</h3>
+                    <p class="text-gray-200 leading-relaxed">
+                        我们相信团队的力量大于个体的简单相加。通过开放、透明的协作模式，我们共同创造价值，共享成果。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 职位列表 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="positions-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">职位机会</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mt-10">
+                <!-- 产品岗位 -->
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-100">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-white">产品经理</h3>
+                        <span class="inline-block px-3 py-1 bg-blue-600 text-white text-sm rounded-full">全职</span>
+                    </div>
+                    <p class="text-gray-200 mb-6 leading-relaxed">
+                        负责任务资产产品的设计、规划和迭代，深度参与产品从概念到落地的全过程，打造任务经济生态的核心产品。
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="text-xl font-semibold text-white mb-2">要求：</h4>
+                        <ul class="list-disc list-inside text-gray-200 space-y-1 pl-2">
+                            <li>3年以上互联网产品经理经验</li>
+                            <li>具备良好的逻辑思维和沟通能力</li>
+                            <li>熟悉资产数字化或区块链技术优先</li>
+                            <li>对任务经济和价值网络有深刻理解</li>
+                        </ul>
+                    </div>
+                    <a href="#application-form" class="btn btn-outline w-full text-center">申请职位</a>
+                </div>
+                
+                <!-- 技术岗位 -->
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-200">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-white">高级开发工程师</h3>
+                        <span class="inline-block px-3 py-1 bg-blue-600 text-white text-sm rounded-full">全职</span>
+                    </div>
+                    <p class="text-gray-200 mb-6 leading-relaxed">
+                        参与任务资产平台核心系统的设计和开发，构建安全、高效、可扩展的技术架构，实现任务资产的数字化和流通。
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="text-xl font-semibold text-white mb-2">要求：</h4>
+                        <ul class="list-disc list-inside text-gray-200 space-y-1 pl-2">
+                            <li>5年以上后端开发经验</li>
+                            <li>精通Go或Java，熟悉微服务架构</li>
+                            <li>具备分布式系统设计和优化能力</li>
+                            <li>熟悉区块链技术优先</li>
+                        </ul>
+                    </div>
+                    <a href="#application-form" class="btn btn-outline w-full text-center">申请职位</a>
+                </div>
+                
+                <!-- 运营岗位 -->
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-white">社区运营经理</h3>
+                        <span class="inline-block px-3 py-1 bg-blue-600 text-white text-sm rounded-full">全职</span>
+                    </div>
+                    <p class="text-gray-200 mb-6 leading-relaxed">
+                        负责任务社区的用户增长和活跃度提升，设计和执行社区运营策略，打造任务经济生态的活跃共创社区。
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="text-xl font-semibold text-white mb-2">要求：</h4>
+                        <ul class="list-disc list-inside text-gray-200 space-y-1 pl-2">
+                            <li>3年以上社区运营或内容运营经验</li>
+                            <li>优秀的文案策划和活动设计能力</li>
+                            <li>良好的沟通协调能力和团队合作精神</li>
+                            <li>对新兴经济模式有浓厚兴趣</li>
+                        </ul>
+                    </div>
+                    <a href="#application-form" class="btn btn-outline w-full text-center">申请职位</a>
+                </div>
+                
+                <!-- 市场岗位 -->
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll delay-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-white">市场策略总监</h3>
+                        <span class="inline-block px-3 py-1 bg-blue-600 text-white text-sm rounded-full">全职</span>
+                    </div>
+                    <p class="text-gray-200 mb-6 leading-relaxed">
+                        负责公司整体市场策略规划和执行，打造任务经济品牌影响力，推动任务资产概念的市场教育和普及。
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="text-xl font-semibold text-white mb-2">要求：</h4>
+                        <ul class="list-disc list-inside text-gray-200 space-y-1 pl-2">
+                            <li>8年以上市场营销经验，5年以上团队管理经验</li>
+                            <li>具备战略思维和创新精神</li>
+                            <li>出色的项目管理能力和资源整合能力</li>
+                            <li>有新兴技术或金融行业经验优先</li>
+                        </ul>
+                    </div>
+                    <a href="#application-form" class="btn btn-outline w-full text-center">申请职位</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应聘流程 -->
+    <section class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="process-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">应聘流程</h2>
+            <div class="max-w-5xl mx-auto mt-16">
+                <div class="flex flex-col md:flex-row justify-between animate-on-scroll">
+                    <div class="process-step mb-12 md:mb-0">
+                        <div class="step-number">1</div>
+                        <h3 class="text-xl font-bold text-white mt-4 mb-2">简历投递</h3>
+                        <p class="text-gray-300">填写在线申请表，上传您的简历和求职信</p>
+                    </div>
+                    <div class="process-connector hidden md:block"></div>
+                    <div class="process-step mb-12 md:mb-0">
+                        <div class="step-number">2</div>
+                        <h3 class="text-xl font-bold text-white mt-4 mb-2">初步筛选</h3>
+                        <p class="text-gray-300">我们会在7个工作日内完成简历筛选</p>
+                    </div>
+                    <div class="process-connector hidden md:block"></div>
+                    <div class="process-step mb-12 md:mb-0">
+                        <div class="step-number">3</div>
+                        <h3 class="text-xl font-bold text-white mt-4 mb-2">面试环节</h3>
+                        <p class="text-gray-300">通常包含2-3轮技术面试和1轮文化面试</p>
+                    </div>
+                    <div class="process-connector hidden md:block"></div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3 class="text-xl font-bold text-white mt-4 mb-2">offer发放</h3>
+                        <p class="text-gray-300">面试通过后，我们会在3个工作日内发出录用通知</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 申请表单 -->
+    <section id="application-form" class="py-20 tech-gradient-section scroll-section">
+        <div class="particles-container" id="form-particles"></div>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center platform-section-title animate-on-scroll">提交申请</h2>
+            <div class="max-w-3xl mx-auto mt-10">
+                <div class="bg-opacity-20 bg-blue-900 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl animate-on-scroll">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-white mb-2">姓名</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg bg-opacity-10 bg-white backdrop-filter backdrop-blur-lg border border-gray-600 text-white">
+                            </div>
+                            <div>
+                                <label class="block text-white mb-2">电子邮箱</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg bg-opacity-10 bg-white backdrop-filter backdrop-blur-lg border border-gray-600 text-white">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-white mb-2">联系电话</label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-lg bg-opacity-10 bg-white backdrop-filter backdrop-blur-lg border border-gray-600 text-white">
+                            </div>
+                            <div>
+                                <label class="block text-white mb-2">应聘职位</label>
+                                <select class="w-full px-4 py-3 rounded-lg bg-opacity-10 bg-white backdrop-filter backdrop-blur-lg border border-gray-600 text-white">
+                                    <option>请选择</option>
+                                    <option>产品经理</option>
+                                    <option>高级开发工程师</option>
+                                    <option>社区运营经理</option>
+                                    <option>市场策略总监</option>
+                                    <option>其他职位</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-white mb-2">自我介绍</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-opacity-10 bg-white backdrop-filter backdrop-blur-lg border border-gray-600 text-white"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-white mb-2">简历上传</label>
+                            <div class="flex items-center justify-center w-full">
+                                <label class="flex flex-col w-full h-32 border-2 border-dashed border-gray-600 rounded-lg cursor-pointer hover:border-gray-400 transition">
+                                    <div class="flex flex-col items-center justify-center pt-7">
+                                        <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                        </svg>
+                                        <p class="pt-1 text-sm text-gray-400">拖放文件或点击上传</p>
+                                        <p class="text-xs text-gray-500">支持 PDF, DOCX (最大10MB)</p>
+                                    </div>
+                                    <input type="file" class="hidden">
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary w-full">提交申请</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚区域 -->
+    <footer class="py-12 tech-gradient-section">
+        <div class="particles-container" id="footer-particles"></div>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="animate-on-scroll">
+                    <img src="images/logo.svg" alt="城根商业" class="h-10 mb-4">
+                    <p class="text-gray-400">开启任务型资产的价值新纪元</p>
+                </div>
+                <div class="animate-on-scroll">
+                    <h3 class="text-white text-lg font-semibold mb-4">平台服务</h3>
+                    <ul class="space-y-2">
+                        <li><a href="platform/academy.html" class="footer-link text-gray-400 hover:text-white">任务商学院</a></li>
+                        <li><a href="platform/goodmaster.html" class="footer-link text-gray-400 hover:text-white">好主人</a></li>
+                        <li><a href="platform/fund.html" class="footer-link text-gray-400 hover:text-white">任务基金</a></li>
+                    </ul>
+                </div>
+                <div class="animate-on-scroll">
+                    <h3 class="text-white text-lg font-semibold mb-4">资源中心</h3>
+                    <ul class="space-y-2">
+                        <li><a href="resources/docs.html" class="footer-link text-gray-400 hover:text-white">文档中心</a></li>
+                        <li><a href="resources/faq.html" class="footer-link text-gray-400 hover:text-white">常见问题</a></li>
+                        <li><a href="blog" class="footer-link text-gray-400 hover:text-white">行业洞察</a></li>
+                    </ul>
+                </div>
+                <div class="animate-on-scroll">
+                    <h3 class="text-white text-lg font-semibold mb-4">关于我们</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="footer-link text-gray-400 hover:text-white">公司介绍</a></li>
+                        <li><a href="join.html" class="footer-link text-gray-400 hover:text-white">加入我们</a></li>
+                        <li><a href="contact.html" class="footer-link text-gray-400 hover:text-white">联系方式</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500">
+                <p>&copy; 2023 城根商业. 保留所有权利.</p>
+                <p class="mt-2">
+                    <a href="mailto:contact@chenggen.com" class="text-gray-400 hover:text-blue-300 transition">contact@chenggen.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // 移动端菜单切换
+        function toggleMobileMenu() {
+            // 创建移动菜单
+            if (!document.querySelector('.mobile-menu')) {
+                const mobileMenu = document.createElement('div');
+                mobileMenu.className = 'mobile-menu fixed inset-0 tech-gradient-section z-40 p-4 flex flex-col';
+                mobileMenu.innerHTML = `
+                    <div class="flex justify-end">
+                        <button class="close-mobile-menu text-white" onclick="document.querySelector('.mobile-menu').remove()">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-center items-center space-y-6 text-xl">
+                        <a href="index.html#academy-card" class="text-white hover:text-blue-300 transition-colors">任务商学院</a>
+                        <a href="index.html#goodmaster-card" class="text-white hover:text-blue-300 transition-colors">好主人</a>
+                        <a href="index.html#fund-card" class="text-white hover:text-blue-300 transition-colors">任务基金</a>
+                        <a href="about.html" class="text-white hover:text-blue-300 transition-colors">关于我们</a>
+                        <a href="join.html" class="text-white hover:text-blue-300 transition-colors">加入我们</a>
+                        <div class="flex mt-8 space-x-4">
+                            <a href="register.html" class="btn btn-outline">注册</a>
+                            <a href="login.html" class="btn btn-primary">登录</a>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(mobileMenu);
+            } else {
+                document.querySelector('.mobile-menu').remove();
+            }
+        }
+
+        // 添加流程步骤样式
+        document.addEventListener('DOMContentLoaded', function() {
+            const processSteps = document.querySelectorAll('.process-step');
+            processSteps.forEach((step, index) => {
+                const stepNumber = step.querySelector('.step-number');
+                stepNumber.style.width = '60px';
+                stepNumber.style.height = '60px';
+                stepNumber.style.borderRadius = '50%';
+                stepNumber.style.backgroundColor = '#1E40AF';
+                stepNumber.style.color = 'white';
+                stepNumber.style.display = 'flex';
+                stepNumber.style.alignItems = 'center';
+                stepNumber.style.justifyContent = 'center';
+                stepNumber.style.fontSize = '24px';
+                stepNumber.style.fontWeight = 'bold';
+                stepNumber.style.margin = '0 auto';
+            });
+
+            const connectors = document.querySelectorAll('.process-connector');
+            connectors.forEach(connector => {
+                connector.style.height = '2px';
+                connector.style.backgroundColor = '#1E40AF';
+                connector.style.opacity = '0.5';
+                connector.style.width = '100%';
+                connector.style.margin = '30px 10px';
+                connector.style.alignSelf = 'center';
+            });
+        });
+    </script>
+</body>
+</html> 
