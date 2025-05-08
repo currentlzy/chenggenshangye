@@ -640,11 +640,12 @@ nav.scrolled {
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 1 !important;
+    height: 100%;
     transform: perspective(1000px) rotateX(0) rotateY(0) translateZ(0);
     position: relative;
     border: 1px solid rgba(52, 152, 219, 0.3);
     overflow: hidden;
+    animation: glow 4s infinite;
 }
 
 .platform-card::before {
@@ -666,6 +667,9 @@ nav.scrolled {
     transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), 
                 box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     border-color: rgba(52, 152, 219, 0.5);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25),
+                inset 0 0 15px rgba(52, 152, 219, 0.3),
+                0 0 30px rgba(52, 152, 219, 0.25);
 }
 
 .platform-card:hover::before {
@@ -697,7 +701,6 @@ nav.scrolled {
     font-weight: 700;
     margin-bottom: 1rem;
     color: white;
-    position: relative;
     text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
 }
 
@@ -706,7 +709,7 @@ nav.scrolled {
     position: absolute;
     bottom: -8px;
     left: 50%;
-    width: 50px;
+    width: 40px;
     height: 2px;
     background: linear-gradient(90deg, #1e88e5, #64b5f6);
     transform: translateX(-50%);
@@ -717,7 +720,7 @@ nav.scrolled {
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 2rem;
     flex-grow: 1;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 .card-btn {
@@ -790,20 +793,41 @@ nav.scrolled {
     background: rgba(6, 32, 58, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15), 
-                inset 0 0 5px rgba(52, 152, 219, 0.1);
-    transition: var(--transition-smooth);
-    height: 100%;
+    border-radius: 16px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 
+                inset 0 0 15px rgba(52, 152, 219, 0.2),
+                0 0 20px rgba(52, 152, 219, 0.15);
+    transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), 
+                box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+                opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform, box-shadow;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(30px);
-    will-change: transform, opacity;
-    border: 1px solid rgba(52, 152, 219, 0.2);
+    height: 100%;
+    transform: perspective(1000px) rotateX(0) rotateY(0) translateZ(0);
+    position: relative;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    overflow: hidden;
+    animation: glow 4s infinite;
+}
+
+.use-case-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(52, 152, 219, 0.2), 
+        transparent);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .use-case-card.animate-in {
@@ -812,15 +836,33 @@ nav.scrolled {
 }
 
 .use-case-card:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: perspective(1000px) translateY(-15px) scale(1.03) !important;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), 
+                box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border-color: rgba(52, 152, 219, 0.5);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25),
-                inset 0 0 10px rgba(52, 152, 219, 0.2);
-    border-color: rgba(52, 152, 219, 0.4);
+                inset 0 0 15px rgba(52, 152, 219, 0.3),
+                0 0 30px rgba(52, 152, 219, 0.25);
 }
 
-.use-case-icon {
+.use-case-card:hover::before {
+    left: 100%;
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
     margin-bottom: 1.5rem;
-    filter: drop-shadow(0 0 5px rgba(52, 152, 219, 0.5));
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(16, 42, 67, 0.8);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.3),
+                inset 0 0 10px rgba(52, 152, 219, 0.2);
+    transition: all 0.5s ease;
 }
 
 .use-case-title {
@@ -829,26 +871,68 @@ nav.scrolled {
     margin-bottom: 1rem;
     color: white;
     text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    position: relative;
+}
+
+.use-case-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #1e88e5, #64b5f6);
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 
 .use-case-desc {
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 1.5rem;
     flex-grow: 1;
+    line-height: 1.6;
 }
 
 .use-case-btn {
-    padding: 0.5rem 1.5rem;
-    color: rgba(52, 152, 219, 1);
+    padding: 0.75rem 2rem;
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(52, 152, 219, 0.6);
+    border-radius: 50px;
     font-weight: 600;
-    border-bottom: 2px solid rgba(52, 152, 219, 0.8);
-    transition: var(--transition);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
 }
 
-.use-case-btn:hover {
-    color: rgba(100, 181, 246, 1);
-    border-color: rgba(100, 181, 246, 0.8);
-    text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+.use-case-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #1e88e5, #64b5f6);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.use-case-card:hover .use-case-btn {
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+}
+
+.use-case-card:hover .use-case-btn::before {
+    width: 100%;
+}
+
+.use-case-card:hover .card-icon {
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 0 0 30px rgba(52, 152, 219, 0.5),
+                inset 0 0 15px rgba(52, 152, 219, 0.3);
 }
 
 /* CTA 区域 */
@@ -916,6 +1000,27 @@ nav.scrolled {
 }
 
 .notion-button:hover {
+    background: rgba(26, 52, 77, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: rgba(52, 152, 219, 0.6);
+}
+
+/* 联系电话按钮 */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    background: rgba(16, 42, 67, 0.9);
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.contact-btn:hover {
     background: rgba(26, 52, 77, 0.9);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);

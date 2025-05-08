@@ -593,32 +593,50 @@ function setupCardAnimations() {
     const platformCards = document.querySelectorAll('.platform-card');
     const useCaseCards = document.querySelectorAll('.use-case-card');
     
-    // 为平台卡片添加Hover动画
-    platformCards.forEach(card => {
+    // 为平台卡片和应用场景卡片添加Hover动画
+    const allCards = [...platformCards, ...useCaseCards];
+    
+    allCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.querySelector('.card-icon').style.transform = 'scale(1.1) rotate(5deg)';
+            const cardIcon = this.querySelector('.card-icon');
+            if (cardIcon) {
+                cardIcon.style.transform = 'scale(1.1) rotate(5deg)';
+            }
         });
         
         card.addEventListener('mouseleave', function() {
-            this.querySelector('.card-icon').style.transform = '';
+            const cardIcon = this.querySelector('.card-icon');
+            if (cardIcon) {
+                cardIcon.style.transform = '';
+            }
+        });
+        
+        // 为卡片添加点击高亮效果
+        card.addEventListener('click', function(e) {
+            // 如果点击的是按钮，不触发卡片高亮
+            if (e.target.closest('.card-btn') || e.target.closest('.use-case-btn')) {
+                return;
+            }
+            
+            // 移除所有卡片的高亮
+            allCards.forEach(c => c.classList.remove('platform-highlight'));
+            
+            // 为当前卡片添加高亮
+            this.classList.add('platform-highlight');
+            
+            // 3秒后自动移除高亮
+            setTimeout(() => {
+                this.classList.remove('platform-highlight');
+            }, 3000);
         });
     });
     
-    // 应用场景卡片轮播
-    if (useCaseCards.length > 0) {
-        // 简易轮播效果
-        let currentIndex = 0;
-        const cardContainer = document.querySelector('.use-case-slider');
-        
-        // 仅在小屏幕下启用轮播
-        if (window.innerWidth < 768 && cardContainer) {
-            setInterval(() => {
-                currentIndex = (currentIndex + 1) % useCaseCards.length;
-                const scrollPos = useCaseCards[currentIndex].offsetLeft;
-                cardContainer.scrollTo({ left: scrollPos, behavior: 'smooth' });
-            }, 4000);
-        }
-    }
+    // 确保所有卡片初始时都可见
+    setTimeout(() => {
+        allCards.forEach(card => {
+            card.classList.add('animate-in');
+        });
+    }, 300);
 }
 
 // 添加返回顶部功能
